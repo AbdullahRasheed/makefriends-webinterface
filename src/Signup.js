@@ -1,27 +1,34 @@
 import './Signup.css'
 import Post from './RESTRequest';
+import Form from './components/InputForm';
 
 function SignupForm(){
-    return (
-        <form>
-            <h1>Signup Page</h1>
-            <input type="text" placeholder="Username" className="signup-text-input" id="signup-username-input"/>
-            <input type="password" placeholder="Password" className="signup-text-input" id="signup-password-input"/>
-            <button type="button" className="signup-button" onClick={signupSubmit}>Sign up</button>
-            <label id="signup-response" />
-        </form>
-    );
-}
+    const fields = [
+        {
+            "type": "text",
+            "name": "username",
+            "placeholder": "Username"
+        },
+        {
+            "type": "password",
+            "name": "password",
+            "placeholder": "Password"
+        }
+    ];
 
-async function signupSubmit() {
-    var usernameInput = document.getElementById("signup-username-input");
-    var passwordInput = document.getElementById("signup-password-input");
-    var signupResponse = document.getElementById("signup-response");
-  
-    await Post("user/register", {
-      "username": usernameInput.value,
-      "password": passwordInput.value
-    }).then(response => signupResponse.textContent = response);
+    async function submit(formData){
+        const responseText = document.getElementById("Signup-response");
+
+        await Post("user/register", formData).then(response => responseText.textContent = response);
+    }
+
+    return (
+        <div className="Signup-container">
+            <h1>Signup Page</h1>
+            <Form inputs={fields} submitName="Sign up" onSubmit={submit}/>
+            <p id="Signup-response"/>
+        </div>
+    );
 }
 
 export default SignupForm;
