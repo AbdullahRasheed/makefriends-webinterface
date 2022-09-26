@@ -2,6 +2,7 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route, useNavigate} from 'react-router-dom';
 import LoginForm from './Login';
 import SignupForm from './Signup';
+import MainButton from './components/MainButton';
 
 function App() {
   return (
@@ -43,8 +44,8 @@ function RightMainContent() {
       <div className="main-right-content">
         <h1>Join now!</h1>
         <div className="cont-form">
-          <button type="button" onClick={() => navigate("/login")}>Log in</button>
-          <button type="button" onClick={() => navigate("/signup")}>Sign up</button>
+          <MainButton onClick={() => navigate("/login")}>Login</MainButton>
+          <MainButton onClick={() => navigate("/signup")}>Sign up</MainButton>
         </div>
       </div>
     </div>

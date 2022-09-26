@@ -20,7 +20,8 @@
   align-items: center;
 }
 
-.leftside h1, p {
+.leftside h1,
+p {
   margin: 0;
   padding: 0;
 }
@@ -34,9 +35,9 @@
   font-size: smaller;
   text-align: right;
   -webkit-animation: slide-bottom 2s cubic-bezier(0.645, 0.045, 0.355, 1.000) both,
-          color-change-2x 2s cubic-bezier(0.550, 0.055, 0.675, 0.190) both;
+    color-change-2x 2s cubic-bezier(0.550, 0.055, 0.675, 0.190) both;
   animation: slide-bottom 2s cubic-bezier(0.645, 0.045, 0.355, 1.000) both,
-          color-change-2x 2s cubic-bezier(0.550, 0.055, 0.675, 0.190) both;
+    color-change-2x 2s cubic-bezier(0.550, 0.055, 0.675, 0.190) both;
 }
 
 .rightside {
@@ -67,23 +68,6 @@
   width: max(15%, 6em);
   height: max(4em, 5vh);
   margin: 1em;
-  font-weight: 600;
-  color: rgb(51, 51, 51);
-  background-color: white;
-  border: 3px solid #b3b3b3;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s background-color border-color;
-  transition: 0.1s transform;
-}
-
-.cont-form button:hover {
-  background-color: rgb(255, 138, 138);
-  border-color: rgb(255, 178, 178);
-}
-
-.cont-form button:active {
-  transform: scale(0.9);
 }
 
 /* ----------------------------------------------

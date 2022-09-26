@@ -1,13 +1,14 @@
 import './Login.css';
+import MainButton from './components/MainButton';
 import Post from './RESTRequest';
 
 function LoginForm(){
     return (
-        <form>
+        <form className="login-form">
             <h1>Login Page</h1>
             <input type="text" placeholder="Username" className="login-text-input" id="username-input"/>
             <input type="password" placeholder="Password" className="login-text-input" id="password-input"/>
-            <button type="button" className="login-button" onClick={loginSubmit}>Login</button>
+            <MainButton id="login-submit" onClick={loginSubmit}>Login</MainButton>
             <label id="login-response" />
         </form>
     );
