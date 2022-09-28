@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Routes, Route, useNavigate} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import LoginForm from './Login';
 import SignupForm from './Signup';
 import MainButton from './components/MainButton';
@@ -16,7 +16,7 @@ function App() {
   );
 }
 
-function TitlePage(){
+function TitlePage() {
   return (
     <div className="title-page">
       <LeftMainContent />
