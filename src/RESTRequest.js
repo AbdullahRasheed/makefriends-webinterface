@@ -1,9 +1,11 @@
-async function Post(url, body){
-    return await fetch('https://localhost:7033/' + url, {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
-        body: JSON.stringify(body)
-    }).then((response) => response.json());
+import axios from 'axios';
+
+async function Post(url, body, config=null){
+    return await axios.post('https://localhost:7033/' + url, body, config);
 }
 
 export default Post;
+
+export {
+    Post
+}

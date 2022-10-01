@@ -1,5 +1,5 @@
 import './Signup.css'
-import Post from './RESTRequest';
+import {Post} from './RESTRequest';
 import Form from './components/InputForm';
 
 function SignupForm(){
@@ -19,7 +19,7 @@ function SignupForm(){
     async function submit(formData){
         const responseText = document.getElementById("Signup-response");
 
-        await Post("user/register", formData).then(response => responseText.textContent = response);
+        await Post("user/register", formData).then(response => responseText.textContent = response.data);
     }
 
     return (

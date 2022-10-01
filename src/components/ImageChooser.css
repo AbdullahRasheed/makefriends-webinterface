@@ -1,0 +1,11 @@
+.ImageChooser {
+    background-color: transparent;
+    border: 5px;
+    border-style: dashed;
+    transition: 1s border-style;
+    content: "test";
+}
+
+.ImageChooser:hover {
+    border-style: solid;
+}

@@ -1,6 +1,6 @@
 import './Login.css';
 import InputForm from './components/InputForm';
-import Post from './RESTRequest';
+import {Post} from './RESTRequest';
 
 function LoginForm(){
     const fields = [
@@ -20,7 +20,7 @@ function LoginForm(){
         const responseText = document.getElementById("Login-response");
 
         await Post("user/login", formData)
-            .then(response => responseText.textContent = response);
+            .then(response => responseText.textContent = response.data);
     }
 
     return (        
